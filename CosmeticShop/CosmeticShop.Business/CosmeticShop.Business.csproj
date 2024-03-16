@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CosmeticShop.Data\CosmeticShop.Data.csproj" />
+    <ProjectReference Include="..\CosmeticShop.Shared\CosmeticShop.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
