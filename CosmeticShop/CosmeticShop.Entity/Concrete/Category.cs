@@ -14,6 +14,8 @@ namespace CosmeticShop.Entity.Concrete
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }= DateTime.Now;
         public string CategoryDescription { get; set; }
+        public List<ProductCategory> ProductCategories { get; set; }
+
 
     }
 }
