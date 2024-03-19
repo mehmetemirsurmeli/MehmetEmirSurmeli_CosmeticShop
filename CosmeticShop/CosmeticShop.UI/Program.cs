@@ -4,8 +4,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 #region Services
 
 builder.Services.LoadMyDbContextServices();
@@ -14,6 +12,8 @@ builder.Services.LoadMyRepository();
 
 #endregion
 
+
+var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
 {
@@ -32,4 +32,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+app.UpdateDatabase().Run();

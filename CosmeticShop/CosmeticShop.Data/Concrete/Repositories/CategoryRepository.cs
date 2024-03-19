@@ -16,14 +16,14 @@ namespace CosmeticShop.Data.Concrete.Repositories
         {
         }
 
-        private CosmeticShopDbContext MiniShopDbContext
+        private CosmeticShopDbContext CosmeticShopDbContext
         {
             get { return _dbContext as CosmeticShopDbContext; }
         }
 
         public async Task<List<Category>> GetTopCategories(int n)
         {
-            List<Category> categories = await MiniShopDbContext
+            List<Category> categories = await CosmeticShopDbContext
                 .Categories
                 .Where(c => c.IsActive && !c.IsDeleted)
                 .Take(n)

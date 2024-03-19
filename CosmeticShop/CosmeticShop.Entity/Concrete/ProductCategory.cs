@@ -1,17 +1,10 @@
-﻿using CosmeticShop.Entity.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CosmeticShop.Entity.Concrete
+﻿namespace CosmeticShop.Entity.Concrete
 {
-    public class ProductCategory : GeneralEntity
+    public class ProductCategory
     {
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public Product Product { get; set; }//Navigation Property
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public Category Category { get; set; }//Navigation Property
     }
 }
