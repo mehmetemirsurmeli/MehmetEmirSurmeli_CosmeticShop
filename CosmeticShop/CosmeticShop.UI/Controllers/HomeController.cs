@@ -1,8 +1,8 @@
-﻿using CosmeticShop.MVC.Models;
+﻿using CosmeticShop.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace CosmeticShop.MVC.Controllers
+namespace CosmeticShop.UI.Controllers
 {
     public class HomeController : Controller
     {

@@ -6,8 +6,13 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+#region Services
+
 builder.Services.LoadMyDbContextServices();
 
+builder.Services.LoadMyRepository();
+
+#endregion
 
 
 if (!app.Environment.IsDevelopment())
@@ -27,4 +32,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.UpdateDatabase().Run();
+app.Run();

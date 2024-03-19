@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Entity.Concrete
 {
-    public class Product:GeneralEntity,IMainEntity
+    public class Product : GeneralEntity, IMainEntity
     {
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;

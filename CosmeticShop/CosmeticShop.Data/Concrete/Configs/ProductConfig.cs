@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Concrete.Configs
 {
-    public class ProductConfig:IEntityTypeConfiguration<Product>
+    public class ProductConfig : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> entityTypeBuilder)
         {

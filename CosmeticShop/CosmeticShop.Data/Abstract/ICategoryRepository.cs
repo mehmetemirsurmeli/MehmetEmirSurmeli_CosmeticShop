@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Abstract
 {
-    public interface ICategoryRepository:IGenericRepository<Category>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
         Task<List<Category>> GetTopCategories(int n);
 

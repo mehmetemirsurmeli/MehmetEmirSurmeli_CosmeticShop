@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Concrete.Repositories
 {
-    public class ProductRepository:GenericRepository<Product>,IProductRepository
+    public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public ProductRepository(CosmeticShopDbContext _context) : base(_context) 
+        public ProductRepository(CosmeticShopDbContext _context) : base(_context)
         {
 
         }

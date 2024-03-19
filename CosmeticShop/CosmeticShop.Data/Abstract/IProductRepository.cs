@@ -14,3 +14,4 @@ namespace CosmeticShop.Data.Abstract
         Task ClearProductCategory(int productId, List<int> categoryIds);
     }
 }
+

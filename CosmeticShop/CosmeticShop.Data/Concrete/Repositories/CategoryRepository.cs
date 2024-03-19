@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Concrete.Repositories
 {
-    public class CategoryRepository:GenericRepository<Category>,ICategoryRepository
+    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
         public CategoryRepository(CosmeticShopDbContext _context) : base(_context)
         {

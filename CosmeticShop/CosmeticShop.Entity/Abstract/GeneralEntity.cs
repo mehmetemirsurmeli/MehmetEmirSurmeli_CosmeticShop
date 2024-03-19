@@ -11,7 +11,7 @@ namespace CosmeticShop.Entity.Abstract
         public string Name { get; set; }
         public DateTime ModifiedDate { get; set; } = DateTime.Now;
         public bool IsDeleted { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; }
         public string Url { get; set; }
     }
 }
