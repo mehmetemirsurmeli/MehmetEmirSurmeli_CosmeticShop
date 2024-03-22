@@ -31,5 +31,11 @@ namespace CosmeticShop.UI.Extensions
             return services;
         }
 
+        public static IServiceCollection LoadMyOtherService(this IServiceCollection services)
+        {
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            return services;
+        }
+
     }
 }

@@ -9,6 +9,8 @@ builder.Services.LoadMyDbContextServices();
 
 builder.Services.LoadMyRepository();
 
+builder.Services.LoadMyOtherService();
+
 #endregion
 
 
