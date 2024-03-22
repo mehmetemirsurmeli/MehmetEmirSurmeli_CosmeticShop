@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Abstract
 {
-    public interface IProductRepository
+    public interface IProductRepository:IGenericRepository<Product>
     {
         Task<List<Product>> GetProductsByCategoryIdAsync(int categoryId);
         Task<List<Product>> GetProductsByCategoryUrlAsync(string categoryUrl);

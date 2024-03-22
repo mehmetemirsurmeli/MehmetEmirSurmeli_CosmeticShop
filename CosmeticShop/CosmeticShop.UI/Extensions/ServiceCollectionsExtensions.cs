@@ -1,5 +1,7 @@
-﻿using CosmeticShop.Data.Abstract;
-using CosmeticShop.Data.Concrete.Context;
+﻿using CosmeticShop.Business.Abstract;
+using CosmeticShop.Business.Concrete;
+using CosmeticShop.Data.Abstract;
+using CosmeticShop.Data.Concrete.Contexts;
 using CosmeticShop.Data.Concrete.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +21,10 @@ namespace CosmeticShop.UI.Extensions
         }
         public static IServiceCollection LoadMyRepository(this IServiceCollection services)
         {
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IProductService, ProductManager>();
+
+
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
 

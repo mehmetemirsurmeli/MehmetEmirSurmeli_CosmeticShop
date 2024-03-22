@@ -1,4 +1,5 @@
-﻿    <!-- Product Section Begin -->
+﻿@model List<ProductViewModel>
+<!-- Product Section Begin -->
 <section class="product spad">
     <div class="container">
         <div class="row">
@@ -11,26 +12,39 @@
             </div>
         </div>
         <div class="row product__filter">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="images/products/product/product-1.jpg">
-                        <span class="label">New</span>
-                        <ul class="product__hover">
-                            <li><a href="#"><img src="images/products/icon/heart.png" alt=""></a></li>
-                            <li><a href="#"><img src="images/products/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                            <li><a href="#"><img src="images/products/icon/search.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6>Piqué Biker Jacket</h6>
-                        <a href="#" class="add-cart">+ Add To Cart</a>
-                       
-                        <h5>$67.24</h5>
-                        
+            
+                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="/images/products/">
+                            <span class="label">New</span>
+                            <ul class="product__hover">
+                                <li><a href="#"><img src="images/products/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/products/icon/compare.png" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="images/products/icon/search.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6>Piqué Biker Jacket</h6>
+                            <a href="#" class="add-cart">+ Add To Cart</a>
+
+                            <h5>$67.24</h5>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+            
+            
+
+
+
+
+
+
+
+
+
+
+            @* <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="images/products/product/product-2.jpg">
                         <ul class="product__hover">
@@ -269,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> *@
         </div>
     </div>
 </section>

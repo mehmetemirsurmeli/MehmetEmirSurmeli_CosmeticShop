@@ -2,8 +2,8 @@ using CosmeticShop.UI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
 #region Services
+builder.Services.AddControllersWithViews();
 
 builder.Services.LoadMyDbContextServices();
 

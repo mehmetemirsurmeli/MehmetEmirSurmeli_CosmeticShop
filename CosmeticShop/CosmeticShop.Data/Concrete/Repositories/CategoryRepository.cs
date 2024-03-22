@@ -1,5 +1,5 @@
 ﻿using CosmeticShop.Data.Abstract;
-using CosmeticShop.Data.Concrete.Context;
+using CosmeticShop.Data.Concrete.Contexts;
 using CosmeticShop.Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;

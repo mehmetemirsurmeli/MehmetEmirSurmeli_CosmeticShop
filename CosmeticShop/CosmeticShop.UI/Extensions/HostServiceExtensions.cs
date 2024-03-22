@@ -1,4 +1,4 @@
-﻿using CosmeticShop.Data.Concrete.Context;
+﻿using CosmeticShop.Data.Concrete.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 namespace CosmeticShop.UI.Extensions
