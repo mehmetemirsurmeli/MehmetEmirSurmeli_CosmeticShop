@@ -13,10 +13,10 @@ namespace CosmeticShop.UI.Controllers
             _productManager = productManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-           
-            return View();
+           var products = await _productManager.GetAllNonDeletedAsync(false);
+            return View(products.Data);
         }
     }
 }
