@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb__text">
                     <h4>Ürünler</h4>
-                    
+
                 </div>
             </div>
         </div>
@@ -217,27 +217,27 @@
                                 <div class="product__item__pic set-bg" data-setbg="images/products/@products.ImageUrl">
                                     <ul class="product__hover">
                                         <li>
-                                            <a asp-area="" 
-                                            asp-action="Details"
-                                            asp-controller="Product" 
-                                            class="text-info display-4" ><i class="fa-solid fa-info"></i></a></li>
+                                            <a asp-area=""
+                                               asp-action="Details"
+                                               asp-controller="Products"
+                                               class="text-info display-4"><i class="fa-solid fa-info"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6>@products.Name</h6>
                                     <a href="#" class="add-cart">+ Sepete Ekle</a>
                                     <h5>@($"{products.Price:C0}")</h5>
-                                    </div>
+                                </div>
                             </div>
-                            </div>
-                        
+                        </div>
+
                     }
-                    
-                    
+
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Shop Section End -->
-
