@@ -26,5 +26,11 @@ namespace CosmeticShop.UI.Controllers
 
             return View(products.Data);
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+           var product = await _productManager.GetByIdAsync(id);
+            return View(product.Data);
+        }
     }
 }

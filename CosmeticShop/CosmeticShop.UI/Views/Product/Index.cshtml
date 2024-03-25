@@ -212,30 +212,25 @@
                     @foreach (var products in Model)
                     {
                         <div class="col-lg-4 col-md-6 col-sm-6">
+
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="images/products/@products.ImageUrl">
                                     <ul class="product__hover">
-                                        <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                         <li>
-                                            <a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a>
-                                        </li>
-                                        <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                            <a asp-area="" 
+                                            asp-action="Details"
+                                            asp-controller="Product" 
+                                            class="text-info display-4" ><i class="fa-solid fa-info"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6>@products.Name</h6>
                                     <a href="#" class="add-cart">+ Sepete Ekle</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
                                     <h5>@($"{products.Price:C0}")</h5>
-                                </div>
+                                    </div>
                             </div>
-                        </div>
+                            </div>
+                        
                     }
                     
                     
@@ -245,3 +240,4 @@
     </div>
 </section>
 <!-- Shop Section End -->
+
