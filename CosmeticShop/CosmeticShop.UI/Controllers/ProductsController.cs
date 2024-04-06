@@ -14,15 +14,24 @@ namespace CosmeticShop.UI.Controllers
             _categoryManager = categoryManager;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string categoryUrl = null)
         {
-            var products = await _productManager.GetAllNonDeletedAsync(false);
+            var products =
+                String.IsNullOrEmpty(categoryUrl) ?
+                await _productManager.GetAllNonDeletedAsync() :
+                await _productManager.GetProductsByCategoryUrlAsync(categoryUrl);
+
+            var category = !String.IsNullOrEmpty(categoryUrl) ? await _categoryManager.GetByUrlAsync(categoryUrl) : null;
+
+            ViewBag.CategoryName = category != null ? category.Data.Name : null;
+
             return View(products.Data);
         }
-
+        
         public async Task<IActionResult> Details(int id)
         {
-            return View();
+            var product = await _productManager.GetByIdAsync(id);
+            return View(product.Data);
         }
     }
 }
