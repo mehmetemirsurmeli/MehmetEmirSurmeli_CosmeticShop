@@ -30,17 +30,17 @@ namespace CosmeticShop.Data.Extensions
             {
                 new User
                 {
-                    FirstName="Deniz",
-                    LastName="Foça",
-                    UserName="denizfoca",
-                    NormalizedUserName="DENIZFOCA",
-                    Email="denizfoca@gmail.com",
-                    NormalizedEmail="DENIZFOCA@GMAIL.COM",
+                    FirstName="Mehmet",
+                    LastName="Sürmeli",
+                    UserName="surmelimehmet",
+                    NormalizedUserName="SURMELIMEHMET",
+                    Email="surmelimehmet@gmail.com",
+                    NormalizedEmail="SURMELIMEHMET@GMAIL.COM",
                     Gender="Erkek",
-                    DateOfBirth=new DateTime(1990,5,12),
-                    Address="Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar",
+                    DateOfBirth=new DateTime(2002,1,4),
+                    Address="Güngören İstanbul",
                     City="İstanbul",
-                    PhoneNumber="5558779966",
+                    PhoneNumber="5552225533",
                     EmailConfirmed=true
                 },
                 new User
