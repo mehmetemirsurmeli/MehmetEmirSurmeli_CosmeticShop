@@ -1,12 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using CosmeticShop.Business.Abstract;
 
 namespace CosmeticShop.UI.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "SuperAdmin, Admin")]
+    [Area("Admin")]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IOrderService _orderManager;
+
+        public HomeController(IOrderService orderManager)
         {
-            return View();
+            _orderManager = orderManager;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var orders = await _orderManager.GetOrdersAsync();
+            orders = orders.Take(5).ToList();
+            return View(orders);
         }
     }
 }
