@@ -28,10 +28,7 @@ namespace CosmeticShop.UI.Controllers
             _emailSender = emailSender;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+       
         [HttpGet]
         public IActionResult Register()
         {

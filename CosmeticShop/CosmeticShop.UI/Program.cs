@@ -7,9 +7,13 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.LoadMyDbContextServices();
 
+builder.Services.LoadMyIdentityServices();
+
 builder.Services.LoadMyRepository();
 
 builder.Services.LoadMyOtherService();
+
+
 
 #endregion
 

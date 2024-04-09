@@ -9,8 +9,25 @@
                 <div class="col-lg-6 col-md-5">
                     <div class="header__top__right">
                         <div class="header__top__links">
-                            <a href="#">Giriş Yap</a>
-                            <a href="#">Kayıt Ol</a>
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <a asp-area="" asp-controller="Account" asp-action="Login">Giriş Yap</a>
+                                <a asp-area="" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
+                            }else{
+                                if(User.IsInRole("SuperAdmin")|| User.IsInRole("Admin"))
+                                {
+                                    <a asp-area="Admin"
+                                       asp-controller="Home"
+                                       asp-action="Index">Admin Panel</a>
+                                }
+                                <a asp-area=""
+                                   asp-controller="Account"
+                                   asp-action="Profile">@User.Identity.Name</a>
+                                <a asp-area=""
+                                   asp-controller="Account"
+                                   asp-action="Logout">Çıkış</a>
+                            }
+                            
                         </div>
                     </div>
                 </div>
