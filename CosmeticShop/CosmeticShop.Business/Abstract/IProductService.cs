@@ -10,6 +10,8 @@ namespace CosmeticShop.Business.Abstract
 {
     public interface IProductService
     {
+        Task<Response<ProductViewModel>> CreateAsync(AddProductViewModel addProductViewModel);
+        Task<Response<ProductViewModel>> UpdateAsync(EditProductViewModel editProductViewModel);
         Task<Response<ProductViewModel>> GetByIdAsync(int id);
         Task<Response<List<ProductViewModel>>> GetAllAsync();
         Task<Response<NoContent>> HardDeleteAsync(int id);

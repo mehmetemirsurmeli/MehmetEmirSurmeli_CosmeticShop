@@ -1,4 +1,6 @@
 ﻿using CosmeticShop.Business.Abstract;
+using CosmeticShop.Shared.ComplexTypes;
+using CosmeticShop.Shared.Extensions;
 using CosmeticShop.UI.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -39,6 +41,18 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
                 ProductListItems = productListItems
             };
             return View(model);
+        }
+        public async Task<IActionResult> FilterByProduct(int id)
+        {
+            var orders = await _orderManager.GetOrdersAsync(id);
+
+            return PartialView("_OrderListPartial", orders);
+        }
+
+        public async Task<IActionResult> ChangeStatus(int id)
+        {
+            var orderState = await _orderManager.ChangeStatus(id, OrderState.Preparing);
+            return Json(orderState.GetDisplayName());
         }
     }
 }
