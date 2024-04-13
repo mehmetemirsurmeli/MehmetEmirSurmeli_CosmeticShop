@@ -34,8 +34,28 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+#region RouteRegion
+app.MapControllerRoute(
+    name: "products",
+    pattern: "urunler/{categoryUrl?}",
+    defaults: new { controller = "Product", action = "Index" }
+    );
+
+app.MapAreaControllerRoute(
+    name: "productsadmin",
+    pattern: "yonetici/urunler/{isdeleted}",
+    areaName: "Admin",
+    defaults: new { area = "Admin", controller = "Product", action = "Index" }
+    );
+
+app.MapAreaControllerRoute(
+    name: "Admin",
+    areaName: "Admin",
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
+);
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+#endregion
 app.UpdateDatabase().Run();

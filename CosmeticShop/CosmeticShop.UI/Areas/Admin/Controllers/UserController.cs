@@ -29,9 +29,7 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
         public async Task<IActionResult> AssignRoles(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-
             var userRoles = await _userManager.GetRolesAsync(user);
-
             var roles = await _roleManager.Roles.Select(r => new AssignRoleViewModel
             {
                 RoleId = r.Id,

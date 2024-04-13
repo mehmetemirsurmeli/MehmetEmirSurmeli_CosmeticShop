@@ -1,7 +1,10 @@
 ﻿using CosmeticShop.Business.Abstract;
+using CosmeticShop.Data.Abstract;
 using CosmeticShop.Entity.Concrete;
 using CosmeticShop.Shared.ComplexTypes;
+using CosmeticShop.Shared.Extensions;
 using CosmeticShop.Shared.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +15,24 @@ namespace CosmeticShop.Business.Concrete
 {
     public class OrderManager : IOrderService
     {
-        
+        private readonly IOrderRepository _orderRepository;
+
+        public OrderManager(IOrderRepository orderRepository)
+        {
+            _orderRepository = orderRepository;
+        }
+
         public Task CancelOrder(int orderId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<OrderState> ChangeStatus(int id, OrderState orderState)
+        public async Task<OrderState> ChangeStatus(int id, OrderState orderState)
         {
-            throw new NotImplementedException();
+            var order = await _orderRepository.GetByIdAsync(x => x.Id == id);
+            order.OrderState = orderState;
+            await _orderRepository.UpdateAsync(order);
+            return orderState;
         }
 
         public Task CreateAsync(Order order)
@@ -28,24 +40,97 @@ namespace CosmeticShop.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<AdminOrderViewModel> GetOrderAsync(int orderId)
+        public async Task<AdminOrderViewModel> GetOrderAsync(int orderId)
         {
-            throw new NotImplementedException();
+            var order = await _orderRepository.GetByIdAsync(x => x.Id == orderId,
+                 source => source
+                     .Include(x => x.OrderDetails)
+                     .ThenInclude(y => y.Product));
+            var result = new AdminOrderViewModel
+            {
+                Id = order.Id,
+                OrderDate = order.OrderDate,
+                UserId = order.UserId,
+                UserName = $"{order.FirstName} {order.LastName}",
+                OrderDetails = order.OrderDetails.Select(od => new AdminOrderDetailViewModel
+                {
+                    Id = od.Id,
+                    Price = od.Price,
+                    Quantity = od.Quantity
+                }).ToList()
+            };
+            return result;
         }
 
-        public Task<List<AdminOrderViewModel>> GetOrdersAsync()
+        public async Task<List<AdminOrderViewModel>> GetOrdersAsync()
         {
-            throw new NotImplementedException();
+            var orders = await _orderRepository.GetAllAsync(null,
+                source => source
+                    .Include(x => x.OrderDetails)
+                    .ThenInclude(y => y.Product)
+                    .Include(x => x.User));
+            var result = orders.Select(o => new AdminOrderViewModel
+            {
+                Id = o.Id,
+                OrderDate = o.OrderDate,
+                UserId = o.UserId,
+                UserName = $"{o.FirstName} {o.LastName}",
+                OrderState = o.OrderState.GetDisplayName(),
+                OrderDetails = o.OrderDetails.Select(od => new AdminOrderDetailViewModel
+                {
+                    Id = od.Id,
+                    Price = od.Price,
+                    Quantity = od.Quantity
+                }).ToList()
+            }).ToList();
+            return result.OrderByDescending(x => x.Id).ToList();
         }
 
-        public Task<List<AdminOrderViewModel>> GetOrdersAsync(string userId)
+        public async Task<List<AdminOrderViewModel>> GetOrdersAsync(string userId)
         {
-            throw new NotImplementedException();
+            var orders = await _orderRepository.GetAllAsync(x => x.UserId == userId,
+                source => source
+                    .Include(x => x.OrderDetails)
+                    .ThenInclude(y => y.Product));
+            var result = orders.Select(o => new AdminOrderViewModel
+            {
+                Id = o.Id,
+                OrderDate = o.OrderDate,
+                UserId = o.UserId,
+                UserName = $"{o.FirstName} {o.LastName}",
+                OrderDetails = o.OrderDetails.Select(od => new AdminOrderDetailViewModel
+                {
+                    Id = od.Id,
+                    Price = od.Price,
+                    Quantity = od.Quantity,
+                    Product = new ProductViewModel
+                    {
+                        ImageUrl = od.Product.ImageUrl,
+                        Name = od.Product.Name
+                    }
+                }).ToList()
+            }).ToList();
+            result = result.OrderByDescending(x => x.Id).ToList();
+            return result;
         }
 
-        public Task<List<AdminOrderViewModel>> GetOrdersAsync(int productId)
+        public async Task<List<AdminOrderViewModel>> GetOrdersAsync(int productId)
         {
-            throw new NotImplementedException();
+            var orders = await _orderRepository.GetAllOrdersByProductIdAsync(productId);
+            var result = orders.Select(o => new AdminOrderViewModel
+            {
+                Id = o.Id,
+                OrderDate = o.OrderDate,
+                UserId = o.UserId,
+                UserName = $"{o.FirstName} {o.LastName}",
+                OrderDetails = o.OrderDetails.Select(od => new AdminOrderDetailViewModel
+                {
+                    Id = od.Id,
+                    Price = od.Price,
+                    Quantity = od.Quantity
+                }).ToList()
+            }).ToList();
+            return result;
         }
     }
 }
