@@ -32,6 +32,7 @@ namespace CosmeticShop.UI.Extensions
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IShoppingCartService, ShoppingCartManager>();
             services.AddScoped<IShoppingCartItemService, ShoppingCartItemManager>();
+            services.AddScoped<IMessageService, MessageManager>();
             services.AddScoped<IOrderService, OrderManager>();
 
 
@@ -39,6 +40,7 @@ namespace CosmeticShop.UI.Extensions
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
             services.AddScoped<IShoppingCartItemRepository, ShoppingCartıtemRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
 
             return services;

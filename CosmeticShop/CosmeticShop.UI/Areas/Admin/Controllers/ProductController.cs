@@ -50,7 +50,7 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
             var categories = await _categoryManager.GetActiveCategories();
             AddProductViewModel model = new AddProductViewModel
             {
-                Categories = categories.Data
+                Categories = categories.Data,
             };
             return View(model);
         }

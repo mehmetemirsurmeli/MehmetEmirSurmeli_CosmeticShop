@@ -29,8 +29,7 @@ namespace CosmeticShop.Business.Concrete
 
             if (shoppingCart != null)
             {
-                //Eğer ürün daha önceden sepette varsa, sıra numarası bulunur ve index içine konulur.
-                //Eğer ürün daha önceden sepette yoksa, sıra numarası -1 olarak döner.
+                
                 var index = shoppingCart.ShoppingCartItems.FindIndex(x => x.ProductId == productId);
                 if (index < 0)
                 {
