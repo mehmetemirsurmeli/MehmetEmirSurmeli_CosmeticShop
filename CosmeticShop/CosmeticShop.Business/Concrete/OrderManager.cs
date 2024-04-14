@@ -33,19 +33,20 @@ namespace CosmeticShop.Business.Concrete
             order.OrderState = orderState;
             await _orderRepository.UpdateAsync(order);
             return orderState;
+
         }
 
-        public Task CreateAsync(Order order)
+        public async Task CreateAsync(Order order)
         {
-            throw new NotImplementedException();
+            await _orderRepository.CreateAsync(order);
         }
 
         public async Task<AdminOrderViewModel> GetOrderAsync(int orderId)
         {
             var order = await _orderRepository.GetByIdAsync(x => x.Id == orderId,
-                 source => source
-                     .Include(x => x.OrderDetails)
-                     .ThenInclude(y => y.Product));
+                source => source
+                    .Include(x => x.OrderDetails)
+                    .ThenInclude(y => y.Product));
             var result = new AdminOrderViewModel
             {
                 Id = order.Id,
@@ -132,5 +133,7 @@ namespace CosmeticShop.Business.Concrete
             }).ToList();
             return result;
         }
+
+
     }
 }

@@ -56,8 +56,8 @@ namespace CosmeticShop.Business.Concrete
         public async Task<ShoppingCartItemViewModel> GetShoppingCartItemAsync(int shoppingCartItemId)
         {
             var shoppingCartItem = await _shoppingCartItemRepository.GetByIdAsync(x => x.Id == shoppingCartItemId, source => source
-               .Include(x => x.Product)
-           );
+                .Include(x => x.Product)
+            );
             return new ShoppingCartItemViewModel
             {
                 Id = shoppingCartItemId,

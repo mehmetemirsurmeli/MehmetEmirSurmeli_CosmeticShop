@@ -44,7 +44,6 @@ namespace CosmeticShop.Data.Concrete.Repositories
         {
             var shoppingCart = await CosmeticShopDbContext
                 .ShoppingCarts
-                //.AsNoTracking()
                 .Where(sc => sc.UserId == userId)
                 .Include(sc => sc.ShoppingCartItems)
                 .ThenInclude(sci => sci.Product)

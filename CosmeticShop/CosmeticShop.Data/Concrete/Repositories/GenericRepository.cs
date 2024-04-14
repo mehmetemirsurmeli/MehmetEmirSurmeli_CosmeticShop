@@ -13,6 +13,7 @@ namespace CosmeticShop.Data.Concrete.Repositories
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext _dbContext;
+
         public GenericRepository(DbContext dbContext)
         {
             _dbContext = dbContext;

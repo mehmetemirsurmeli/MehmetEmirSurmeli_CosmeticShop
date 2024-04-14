@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Business.Concrete
 {
-    public class CategoryManager:ICategoryService
+    public class CategoryManager : ICategoryService
     {
         private readonly IMapper _mapper;
         private readonly ICategoryRepository _repository;

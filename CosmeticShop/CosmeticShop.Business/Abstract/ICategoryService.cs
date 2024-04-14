@@ -11,7 +11,6 @@ namespace CosmeticShop.Business.Abstract
     public interface ICategoryService
     {
         #region Generic
-
         Task<Response<CategoryViewModel>> CreateAsync(AddCategoryViewModel addCategoryViewModel);
         Task<Response<CategoryViewModel>> UpdateAsync(EditCategoryViewModel editCategoryViewModel);
         Task<Response<NoContent>> HardDeleteAsync(int id);

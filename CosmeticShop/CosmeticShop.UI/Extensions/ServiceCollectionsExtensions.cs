@@ -19,37 +19,35 @@ namespace CosmeticShop.UI.Extensions
         public static IServiceCollection LoadMyDbContextServices(this IServiceCollection services)
         {
             services.AddDbContext<CosmeticShopDbContext>(options =>
-            options
-            .UseSqlite(services
+                options
+                    .UseSqlite(services
                         .BuildServiceProvider()
                         .GetRequiredService<IConfiguration>()
                         .GetConnectionString("SqliteConnection")));
+
             return services;
         }
-        public static IServiceCollection LoadMyRepository(this IServiceCollection services)
+        public static IServiceCollection LoadMyRepositoryServices(this IServiceCollection services)
         {
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IShoppingCartService, ShoppingCartManager>();
             services.AddScoped<IShoppingCartItemService, ShoppingCartItemManager>();
-            services.AddScoped<IMessageService, MessageManager>();
             services.AddScoped<IOrderService, OrderManager>();
-
+            services.AddScoped<IMessageService, MessageManager>();
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
-            services.AddScoped<IShoppingCartItemRepository, ShoppingCartıtemRepository>();
-            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IShoppingCartItemRepository, ShoppingCartItemRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
 
             return services;
         }
 
-        public static IServiceCollection LoadMyOtherService(this IServiceCollection services)
+        public static IServiceCollection LoadMyOtherServices(this IServiceCollection services)
         {
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
             services.AddScoped<IImageHelper, ImageHelper>();
 
             services.AddScoped<IEmailSender, SmtpEmailSender>(options => new SmtpEmailSender(
@@ -67,8 +65,9 @@ namespace CosmeticShop.UI.Extensions
                 options.Position = NotyfPosition.TopRight;
             });
 
-            return services;
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            return services;
         }
         public static IServiceCollection LoadMyIdentityServices(this IServiceCollection services)
         {
@@ -104,7 +103,7 @@ namespace CosmeticShop.UI.Extensions
                 options.SlidingExpiration = true;
                 options.Cookie = new CookieBuilder
                 {
-                    Name = "CosmeticShop.Security.Cookie",
+                    Name = "MiniShop.Security.Cookie",
                     HttpOnly = true,
                     SameSite = SameSiteMode.Strict
                 };

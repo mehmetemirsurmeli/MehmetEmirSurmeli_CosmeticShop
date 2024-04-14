@@ -27,11 +27,11 @@ namespace CosmeticShop.Data.Concrete.Contexts
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Message> Messages { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.SeedData();
-            builder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
-            base.OnModelCreating(builder);
+            modelBuilder.SeedData();
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CategoryConfig).Assembly);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -15,5 +15,6 @@ namespace CosmeticShop.Business.Abstract
         Task<Response<NoContent>> DeleteFromShoppingCartAsync(int shoppingCartItemId);
         Task<Response<NoContent>> ClearShoppingCartAsync(int shoppingCartId);
         Task<ShoppingCartItemViewModel> GetShoppingCartItemAsync(int shoppingCartItemId);
+
     }
 }

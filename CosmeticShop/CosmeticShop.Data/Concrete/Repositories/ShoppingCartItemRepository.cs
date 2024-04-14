@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Concrete.Repositories
 {
-    public class ShoppingCartıtemRepository:GenericRepository<ShoppingCartItem>,IShoppingCartItemRepository
+    public class ShoppingCartItemRepository : GenericRepository<ShoppingCartItem>, IShoppingCartItemRepository
     {
-        public ShoppingCartıtemRepository(CosmeticShopDbContext context) : base(context) 
+        public ShoppingCartItemRepository(CosmeticShopDbContext _context) : base(_context)
         {
 
         }
@@ -19,7 +19,6 @@ namespace CosmeticShop.Data.Concrete.Repositories
         {
             get { return _dbContext as CosmeticShopDbContext; }
         }
-
         public async Task ChangeQuantityAsync(ShoppingCartItem shoppingCartItem, int quantity)
         {
             shoppingCartItem.Quantity = quantity;

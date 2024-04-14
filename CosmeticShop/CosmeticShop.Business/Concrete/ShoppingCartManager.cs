@@ -29,7 +29,6 @@ namespace CosmeticShop.Business.Concrete
 
             if (shoppingCart != null)
             {
-                
                 var index = shoppingCart.ShoppingCartItems.FindIndex(x => x.ProductId == productId);
                 if (index < 0)
                 {
@@ -49,6 +48,7 @@ namespace CosmeticShop.Business.Concrete
             }
             return Response<NoContent>.Fail("Bir hata oluştu");
         }
+
 
         public async Task<Response<ShoppingCartViewModel>> GetShoppingCartByUserIdAsync(string userId)
         {

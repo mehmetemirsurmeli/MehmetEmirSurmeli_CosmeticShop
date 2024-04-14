@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Data.Abstract
 {
-    public interface IShoppingCartRepository:IGenericRepository<ShoppingCart>
+    public interface IShoppingCartRepository :IGenericRepository<ShoppingCart>
     {
         Task<ShoppingCart> GetShoppingCartByUserIdAsync(string userId);
         Task DeleteFromShoppingCartAsync(int shoppingCartId, int productId);

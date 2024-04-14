@@ -11,8 +11,8 @@ namespace CosmeticShop.Data.Abstract
     public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task<TEntity> GetByIdAsync(
-             Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>,
-             IIncludableQueryable<TEntity, object>> include = null);
+            Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>,
+            IIncludableQueryable<TEntity, object>> include = null);
         Task<List<TEntity>> GetAllAsync(
             Expression<Func<TEntity, bool>> options = null, Func<IQueryable<TEntity>,
             IIncludableQueryable<TEntity, object>> include = null);

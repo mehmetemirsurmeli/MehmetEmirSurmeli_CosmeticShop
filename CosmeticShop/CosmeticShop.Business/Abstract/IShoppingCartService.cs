@@ -13,5 +13,7 @@ namespace CosmeticShop.Business.Abstract
         Task<Response<NoContent>> InitializeShoppingCartAsync(string userId);
         Task<Response<ShoppingCartViewModel>> GetShoppingCartByUserIdAsync(string userId);
         Task<Response<NoContent>> AddToCartAsync(string userId, int productId, int quantity);
+
+
     }
 }

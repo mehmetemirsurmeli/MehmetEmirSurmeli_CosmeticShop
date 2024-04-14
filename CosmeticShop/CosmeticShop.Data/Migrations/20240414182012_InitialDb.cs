@@ -357,9 +357,9 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "26259b01-e7bb-474c-b744-000b549c700c", null, "Süper Yönetici haklarını taşıyan rol", "SuperAdmin", "SUPERADMIN" },
-                    { "99b5ca95-24f2-4645-bf97-5dc5d9ea2dbf", null, "Yönetici haklarını taşıyan rol", "Admin", "ADMIN" },
-                    { "c3598661-274a-49cc-8034-aaa8463a1a59", null, "Müşteri haklarını taşıyan rol", "Customer", "CUSTOMER" }
+                    { "0123cd7a-3ccb-43e7-b3ad-0faa4e49dcbf", null, "Süper Yönetici haklarını taşıyan rol", "SuperAdmin", "SUPERADMIN" },
+                    { "05f30794-ff2e-4377-9d46-80b0b296a165", null, "Yönetici haklarını taşıyan rol", "Admin", "ADMIN" },
+                    { "f8626d43-ee81-48bd-9da2-270512d29c1a", null, "Müşteri haklarını taşıyan rol", "Customer", "CUSTOMER" }
                 });
 
             migrationBuilder.InsertData(
@@ -367,10 +367,10 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "Address", "City", "ConcurrencyStamp", "DateOfBirth", "Email", "EmailConfirmed", "FirstName", "Gender", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "7011bbfc-e3b3-47c8-bedf-435215000f7b", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "36bde4ec-0be9-40b0-a0b9-1dca3538a03f", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "kemaldurukan@gmail.com", true, "Kemal", "Erkek", "Durukan", false, null, "KEMALDURUKAN@GMAIL.COM", "KEMALDURUKAN", "AQAAAAIAAYagAAAAEONqjg9nW64DKEk4Xh/6EoPZUM+apnA7p3VtvEh+hxKMWwZIz4uQKHu1t82u3BR/Mw==", "5387996655", false, "3c6d89c3-8372-489a-ae07-0c2a049ca6ce", false, "kemaldurukan" },
-                    { "8d038519-0711-478b-823a-d55bab5b2d15", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "e955ce3c-a74f-4129-99aa-01413319862b", new DateTime(1990, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), "denizfoca@gmail.com", true, "Deniz", "Erkek", "Foça", false, null, "DENIZFOCA@GMAIL.COM", "DENIZFOCA", "AQAAAAIAAYagAAAAEKqK1BTWX4xq4gLVJqHjcx5fYm08cnceAwpao+VtnC5Ia3o2wQZGH+9hY/IE6Zc4TQ==", "5558779966", false, "8b74b685-c4b9-4c89-8ef2-054624cfa3b1", false, "denizfoca" },
-                    { "cb003632-d9cd-4ce7-90c4-87dd3232a42b", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "967cac82-310e-4f49-808a-ef5b272b7d02", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "aysenumay@gmail.com", true, "Ayşen Umay", "Kadın", "Ergül", false, null, "AYSENUMAY@GMAIL.COM", "AYSENUMAY", "AQAAAAIAAYagAAAAEEO9bvX1BFzTuH/Zhs+l2Px8d8FZc3WO6Y6cOuKWL2kVa9odC5CmQDcIVum20CaPjg==", "5387996655", false, "6f68db2d-3c8a-453a-857d-907febda9c72", false, "aysenumay" },
-                    { "f26589ad-4665-46f4-a0fd-2e07d02b379b", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "a907e986-ab0a-410f-970f-5fff30a8c615", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "selinmete@gmail.com", true, "Selin", "Kadın", "Mete", false, null, "SELINMETE@GMAIL.COM", "SELINMETE", "AQAAAAIAAYagAAAAEJh7x0MKH1nVQ6K6kC6RGSMVeUEBURU3if8mWuHdq/dLp3rOt0dpzDqBqFG7kFlRgA==", "5387996655", false, "bcefae74-d731-41c5-9167-0741fbff13f7", false, "selinmete" }
+                    { "8742dbdd-e949-44fe-8f1e-3054f743669c", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "1b10aa06-f02c-4166-a645-75164eb5b211", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "aysenumay@gmail.com", true, "Ayşen Umay", "Kadın", "Ergül", false, null, "AYSENUMAY@GMAIL.COM", "AYSENUMAY", "AQAAAAIAAYagAAAAEH1UMU/dvmkHvyN+DhNUOXgfCF4+KI7s9k43erbGVolWf8edie5kBCAwKCIPJaJ5DA==", "5387996655", false, "547a9f9a-6c18-4551-ad65-e5e8a4e71714", false, "aysenumay" },
+                    { "8a7e663b-95b0-49e7-99d0-d2c0e92d3262", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "89af4471-d32f-4a3d-ad85-a6ba2ad910ad", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "selinmete@gmail.com", true, "Selin", "Kadın", "Mete", false, null, "SELINMETE@GMAIL.COM", "SELINMETE", "AQAAAAIAAYagAAAAEK4hMmTySBZb0USHF3NtZkUOLwnhuujlbB0qH1DmbNLAA89oSlYrCkuRTn3YWIKRFg==", "5387996655", false, "0bc0c9a0-6579-4e32-b068-abdee1f80ce9", false, "selinmete" },
+                    { "ae5c0669-de3d-4a51-83af-f40c6a73dec4", 0, "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar", "İstanbul", "9135e8f2-07bf-48ce-97d5-c290963b8490", new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "kemaldurukan@gmail.com", true, "Kemal", "Erkek", "Durukan", false, null, "KEMALDURUKAN@GMAIL.COM", "KEMALDURUKAN", "AQAAAAIAAYagAAAAEGSY9kxxqxk196FERmu6ERDUutgJmUPZo1jc/jcRHChwC4rk0C955TTbltes5GO4Ww==", "5387996655", false, "3965e7da-7aa0-4274-9e56-1189aa6f643e", false, "kemaldurukan" },
+                    { "fb33ef56-a115-4ec6-ac81-20c2daa71398", 0, "Güngören İstanbul", "İstanbul", "6fdd369d-eaa5-4332-b524-75d28ff082eb", new DateTime(2002, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "surmelimehmet@gmail.com", true, "Mehmet", "Erkek", "Sürmeli", false, null, "SURMELIMEHMET@GMAIL.COM", "SURMELIMEHMET", "AQAAAAIAAYagAAAAEDvOezlwAwAUKhXpqr9T5QGLnSd/RBB9/CyTNy5GzbnsebhcLg0ORxEk5Pf1Sgf8HQ==", "5552225533", false, "c3ca1938-df0c-426a-aea3-9569781d36b4", false, "surmelimehmet" }
                 });
 
             migrationBuilder.InsertData(
@@ -378,11 +378,11 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "Id", "CategoryDescription", "CreatedDate", "IsActive", "IsDeleted", "ModifiedDate", "Name", "Url" },
                 values: new object[,]
                 {
-                    { 1, "Parfüm Kategorisi", new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6265), false, false, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6270), "Parfüm", "parfum" },
-                    { 2, "Ruj Kategorisi", new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6273), false, false, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6273), "Ruj", "ruj" },
-                    { 3, "Oje Kategorisi", new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6274), false, false, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6275), "Oje", "oje" },
-                    { 4, "Krem Kategorisi", new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6276), false, false, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6276), "Krem", "krem" },
-                    { 5, "Göz Makyajı Kategorisi", new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6277), false, false, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(6277), "Göz Makyajı", "goz-makyajı" }
+                    { 1, "Parfüm Kategorisi", new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3486), true, false, new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3492), "Parfüm", "parfum" },
+                    { 2, "Ruj Kategorisi", new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3496), true, false, new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3496), "Ruj", "ruj" },
+                    { 3, "Oje Kategorisi", new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3498), true, false, new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3498), "Oje", "oje" },
+                    { 4, "Krem Kategorisi", new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3499), true, false, new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3499), "Krem", "krem" },
+                    { 5, "Göz Makyajı Kategorisi", new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3500), true, false, new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3500), "Göz Makyajı", "goz-makyaji" }
                 });
 
             migrationBuilder.InsertData(
@@ -390,17 +390,17 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "ImageUrl", "IsActive", "IsDeleted", "IsHome", "ModifiedDate", "Name", "Price", "Properties", "Url" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4442), "1.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4445), "Diorm Sauvage EDP", 13000m, "Mükemmel bir parfüm", "dior-sauvage" },
-                    { 2, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4450), "2.png", false, false, false, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4450), "Avon Full Speed", 69000m, "Mükemmel parfüm", "avon-full-speed" },
-                    { 3, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4452), "3.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4452), "Tom Ford Bois Marocain Eau de Parfum 250 Ml", 29000m, "İdare eder", "tom-ford-bois-marocain" },
-                    { 4, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4454), "4.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4454), "Givenchy Gentleman Boisee Eau de Parfum EDP 200 Ml", 39000m, "Harika bir parfüm", "givenchy-gentlemen-boisee" },
-                    { 5, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4455), "5.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4456), "Dior Fahrenheit / Erkek Parfüm", 52000m, "Harika bir parfüm", "dior-fahrenheit" },
-                    { 6, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4457), "6.png", false, false, false, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4457), "Blvgari BVLGARI Man Wood Essence - Eau de Parfum 150ml", 79000m, "harika bir parfüm", "blvgari-man-vood" },
-                    { 7, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4458), "7.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4459), "Creed Aventus Edp 100 ml Erkek Parfüm", 19000m, "harika bir parfüm", "creed-aventus-edp" },
-                    { 8, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4460), "8.png", false, false, false, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4467), "Parfums De Marly Pegasus Exclusif Edp 125 ml", 21000m, "Süper bir parfüm", "parfums-de-marly-pegasus" },
-                    { 9, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4476), "9.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4476), "Tom Ford Tobacco Vanille Eau de Parfum 50 Ml", 1250m, "Klasik sevenler için", "tom-ford-tobacco-vanille" },
-                    { 10, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4478), "10.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4478), "Spice Bomb Extreme", 2100m, "Dayanılmaz koku", "spice-bomb-extreme" },
-                    { 11, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4479), "11.png", false, false, true, new DateTime(2024, 3, 22, 15, 8, 10, 39, DateTimeKind.Local).AddTicks(4479), "Paco Rabanne Invictus EDT Erkek Parfüm, 100 ml", 9800m, "Dünya klasiği dayanılmaz koku", "paco-rabanne-invictus" }
+                    { 1, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1608), "1.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1612), "Diorm Sauvage EDP", 13000m, "Mükemmel bir parfüm", "dior-sauvage" },
+                    { 2, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1621), "2.png", true, false, false, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1621), "Avon Full Speed", 69000m, "Mükemmel parfüm", "avon-full-speed" },
+                    { 3, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1623), "3.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1623), "Tom Ford Bois Marocain Eau de Parfum 250 Ml", 29000m, "İdare eder", "tom-ford-bois-marocain" },
+                    { 4, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1624), "4.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1625), "Givenchy Gentleman Boisee Eau de Parfum EDP 200 Ml", 39000m, "Harika bir parfüm", "givenchy-gentlemen-boisee" },
+                    { 5, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1627), "5.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1627), "Dior Fahrenheit / Erkek Parfüm", 52000m, "Harika bir parfüm", "dior-fahrenheit" },
+                    { 6, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1628), "6.png", true, false, false, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1629), "Blvgari BVLGARI Man Wood Essence - Eau de Parfum 150ml", 79000m, "harika bir parfüm", "blvgari-man-vood" },
+                    { 7, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1630), "7.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1630), "Creed Aventus Edp 100 ml Erkek Parfüm", 19000m, "harika bir parfüm", "creed-aventus-edp" },
+                    { 8, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1632), "8.png", true, false, false, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1638), "Parfums De Marly Pegasus Exclusif Edp 125 ml", 21000m, "Süper bir parfüm", "parfums-de-marly-pegasus" },
+                    { 9, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1650), "9.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1651), "Tom Ford Tobacco Vanille Eau de Parfum 50 Ml", 1250m, "Klasik sevenler için", "tom-ford-tobacco-vanille" },
+                    { 10, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1652), "10.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1652), "Spice Bomb Extreme", 2100m, "Dayanılmaz koku", "spice-bomb-extreme" },
+                    { 11, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1654), "11.png", true, false, true, new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1654), "Paco Rabanne Invictus EDT Erkek Parfüm, 100 ml", 9800m, "Dünya klasiği dayanılmaz koku", "paco-rabanne-invictus" }
                 });
 
             migrationBuilder.InsertData(
@@ -408,10 +408,10 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(1339), "8d038519-0711-478b-823a-d55bab5b2d15" },
-                    { 2, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(1367), "f26589ad-4665-46f4-a0fd-2e07d02b379b" },
-                    { 3, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(1369), "7011bbfc-e3b3-47c8-bedf-435215000f7b" },
-                    { 4, new DateTime(2024, 3, 22, 15, 8, 10, 38, DateTimeKind.Local).AddTicks(1370), "cb003632-d9cd-4ce7-90c4-87dd3232a42b" }
+                    { 1, new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8560), "fb33ef56-a115-4ec6-ac81-20c2daa71398" },
+                    { 2, new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8586), "8a7e663b-95b0-49e7-99d0-d2c0e92d3262" },
+                    { 3, new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8587), "ae5c0669-de3d-4a51-83af-f40c6a73dec4" },
+                    { 4, new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8588), "8742dbdd-e949-44fe-8f1e-3054f743669c" }
                 });
 
             migrationBuilder.InsertData(
@@ -419,10 +419,10 @@ namespace CosmeticShop.Data.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "99b5ca95-24f2-4645-bf97-5dc5d9ea2dbf", "7011bbfc-e3b3-47c8-bedf-435215000f7b" },
-                    { "26259b01-e7bb-474c-b744-000b549c700c", "8d038519-0711-478b-823a-d55bab5b2d15" },
-                    { "c3598661-274a-49cc-8034-aaa8463a1a59", "cb003632-d9cd-4ce7-90c4-87dd3232a42b" },
-                    { "99b5ca95-24f2-4645-bf97-5dc5d9ea2dbf", "f26589ad-4665-46f4-a0fd-2e07d02b379b" }
+                    { "f8626d43-ee81-48bd-9da2-270512d29c1a", "8742dbdd-e949-44fe-8f1e-3054f743669c" },
+                    { "05f30794-ff2e-4377-9d46-80b0b296a165", "8a7e663b-95b0-49e7-99d0-d2c0e92d3262" },
+                    { "05f30794-ff2e-4377-9d46-80b0b296a165", "ae5c0669-de3d-4a51-83af-f40c6a73dec4" },
+                    { "0123cd7a-3ccb-43e7-b3ad-0faa4e49dcbf", "fb33ef56-a115-4ec6-ac81-20c2daa71398" }
                 });
 
             migrationBuilder.InsertData(

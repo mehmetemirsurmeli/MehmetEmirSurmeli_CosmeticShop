@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CosmeticShop.Business.Mapping
 {
-    public class GeneralMappingProfile:Profile
+    public class GeneralMappingProfile : Profile
     {
         public GeneralMappingProfile()
         {

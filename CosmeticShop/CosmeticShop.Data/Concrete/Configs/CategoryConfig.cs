@@ -15,7 +15,6 @@ namespace CosmeticShop.Data.Concrete.Configs
         {
             entityTypeBuilder.HasKey(c => c.Id);
             entityTypeBuilder.Property(c => c.Id).ValueGeneratedOnAdd();
-
             entityTypeBuilder.Property(c => c.Name).IsRequired().HasMaxLength(50);
             entityTypeBuilder.Property(c => c.CategoryDescription).IsRequired().HasMaxLength(500);
             entityTypeBuilder.Property(c => c.Url).IsRequired().HasMaxLength(50);
@@ -56,7 +55,7 @@ namespace CosmeticShop.Data.Concrete.Configs
                     Id = 5,
                     Name = "Göz Makyajı",
                     CategoryDescription = "Göz Makyajı Kategorisi",
-                    Url = "goz-makyajı"
+                    Url = "goz-makyaji"
                 }
 
                 );

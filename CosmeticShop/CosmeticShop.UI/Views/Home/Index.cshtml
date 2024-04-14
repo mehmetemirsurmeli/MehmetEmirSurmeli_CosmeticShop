@@ -28,8 +28,19 @@
                         </div>
                         <div class="product__item__text">
                             <h6>@p.Name</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                
+                                    <form asp-area=""
+                                          asp-controller="ShoppingCart"
+                                          asp-action="AddToCart">
+                                        <input type="hidden" name="productId" value="@p.Id" />
+                                        <input type="hidden" name="quantity" value="1" />
 
+                                        <button type="submit"><a><span class="icon_bag_alt"></span></a></button>
+                                    </form>
+                                
+                            }
                             <h5>@($"{p.Price:C0}")</h5>
 
                         </div>
