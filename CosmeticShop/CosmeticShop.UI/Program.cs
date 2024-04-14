@@ -9,9 +9,9 @@ builder.Services.LoadMyDbContextServices();
 
 builder.Services.LoadMyIdentityServices();
 
-builder.Services.LoadMyRepository();
+builder.Services.LoadMyRepositoryServices();
 
-builder.Services.LoadMyOtherService();
+builder.Services.LoadMyOtherServices();
 
 
 
