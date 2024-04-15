@@ -49,6 +49,7 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AssignRoles(UserRolesViewModel userRolesViewModel)
         {
+            ModelState.Clear();
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByIdAsync(userRolesViewModel.Id);
