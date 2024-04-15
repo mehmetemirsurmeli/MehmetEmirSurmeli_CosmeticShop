@@ -64,7 +64,7 @@ namespace CosmeticShop.UI.Controllers
             var userId = _userManager.GetUserId(User);
             var shoppingCart = await _shoppingCartManager.GetShoppingCartByUserIdAsync(userId);
             orderViewModel.ShoppingCart = shoppingCart.Data;
-
+            ModelState.Clear();
             if (ModelState.IsValid)
             {
                 //ÖDEME İŞLEMİ BAŞLIYOR -IYZICO
