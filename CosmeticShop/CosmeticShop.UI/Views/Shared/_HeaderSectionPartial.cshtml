@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-3">
                 <div class="header__logo">
-                    <a class="display-4 text-primary btn-link" href="./index.html">CosmeticShop</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="display-4 text-primary btn-link">CosmeticShop</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -62,9 +62,10 @@
             <div class="col-lg-3 col-md-3">
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                    <a href="#"><img src="/images/products/icon/heart.png" alt=""></a>
                     @if (User.Identity.IsAuthenticated)
                     {
+                        @await Component.InvokeAsync("MessageNotification")
+
                         @await Component.InvokeAsync("ShoppingCartNotification", User.Identity.Name ?? null);
                     }
 
