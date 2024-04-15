@@ -12,7 +12,7 @@
         else
         {
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <div class="shopping__cart__table">
                     <table>
                         <thead>
@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="continue__btn">
-                            <a href="#">Continue Shopping</a>
+                            <a asp-area="" asp-action="Index" asp-controller="Products">Alışverişe Devam Et</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -74,14 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="cart__discount">
-                    <h6>Discount codes</h6>
-                    <form action="#">
-                        <input type="text" placeholder="Kupon Kodunuzu Yapıştırınız">
-                        <button type="submit">Apply</button>
-                    </form>
-                </div>
+            <div class="col-lg-4">
                 <div class="cart__total">
                     <h6>Sepet Tutarı</h6>
                     <ul>
