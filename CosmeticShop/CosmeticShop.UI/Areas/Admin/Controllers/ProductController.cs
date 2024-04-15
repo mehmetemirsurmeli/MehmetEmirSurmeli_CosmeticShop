@@ -57,6 +57,7 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(AddProductViewModel model, IFormFile image)
         {
+            ModelState.Clear();
             if (ModelState.IsValid && model.CategoryIds.Count > 0 && image != null)
             {
                 model.ImageUrl = await _imageHelper.UploadImage(image, "products");
@@ -99,6 +100,7 @@ namespace CosmeticShop.UI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditProductViewModel model, IFormFile image)
         {
+            ModelState.Clear();
             if (ModelState.IsValid && model.CategoryIds.Count > 0)
             {
                 if (image != null)

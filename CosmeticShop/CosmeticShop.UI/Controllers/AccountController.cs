@@ -37,6 +37,7 @@ namespace CosmeticShop.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {
+            ModelState.Clear();
             if (ModelState.IsValid)
             {
                 User user = new User
@@ -77,6 +78,7 @@ namespace CosmeticShop.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
+
             if (ModelState.IsValid)
             {
                 User user = await _userManager.FindByNameAsync(loginViewModel.UserName);
@@ -180,6 +182,7 @@ namespace CosmeticShop.UI.Controllers
         {
             var userId = _userManager.GetUserId(User);
             var user = await _userManager.FindByIdAsync(userId);
+            ModelState.Clear();
             if (ModelState.IsValid)
             {
                 user.FirstName = userProfileViewModel.User.FirstName;
