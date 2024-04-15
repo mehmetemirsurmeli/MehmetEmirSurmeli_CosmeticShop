@@ -92,7 +92,7 @@
                         <li>KDV'siz tutar: <span id="sub-total">@($"{(Model.TotalPrice() / 1.2m):C0}")</span></li>
                         <li>KDV dahil tutar: <span id="total">@($"{Model.TotalPrice():C0}")</span></li>
                     </ul>
-                    <a href="#" class="primary-btn">Proceed to checkout</a>
+                    <a asp-area="" asp-controller="Order" asp-action="Checkout" class="primary-btn">Ödemeye adımına devam et</a>
                 </div>
             </div>
             </div>

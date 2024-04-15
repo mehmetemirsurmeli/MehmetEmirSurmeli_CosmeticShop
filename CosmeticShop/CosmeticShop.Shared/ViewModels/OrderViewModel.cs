@@ -1,6 +1,9 @@
-﻿namespace CosmeticShop.Shared.ViewModels
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace CosmeticShop.Shared.ViewModels
 {
-    public class OrderViewModel
+   public class OrderViewModel
     {
         //Kişisel bilgiler
         public string FirstName { get; set; }

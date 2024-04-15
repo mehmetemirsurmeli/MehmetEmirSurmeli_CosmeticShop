@@ -59,10 +59,10 @@ namespace CosmeticShop.Data.Migrations
                         {
                             Id = 1,
                             CategoryDescription = "Parfüm Kategorisi",
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3486),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3938),
                             IsActive = true,
                             IsDeleted = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3492),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3944),
                             Name = "Parfüm",
                             Url = "parfum"
                         },
@@ -70,10 +70,10 @@ namespace CosmeticShop.Data.Migrations
                         {
                             Id = 2,
                             CategoryDescription = "Ruj Kategorisi",
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3496),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3948),
                             IsActive = true,
                             IsDeleted = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3496),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3948),
                             Name = "Ruj",
                             Url = "ruj"
                         },
@@ -81,10 +81,10 @@ namespace CosmeticShop.Data.Migrations
                         {
                             Id = 3,
                             CategoryDescription = "Oje Kategorisi",
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3498),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3949),
                             IsActive = true,
                             IsDeleted = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3498),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3950),
                             Name = "Oje",
                             Url = "oje"
                         },
@@ -92,10 +92,10 @@ namespace CosmeticShop.Data.Migrations
                         {
                             Id = 4,
                             CategoryDescription = "Krem Kategorisi",
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3499),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3951),
                             IsActive = true,
                             IsDeleted = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3499),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3951),
                             Name = "Krem",
                             Url = "krem"
                         },
@@ -103,10 +103,10 @@ namespace CosmeticShop.Data.Migrations
                         {
                             Id = 5,
                             CategoryDescription = "Göz Makyajı Kategorisi",
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3500),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3952),
                             IsActive = true,
                             IsDeleted = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 533, DateTimeKind.Local).AddTicks(3500),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 767, DateTimeKind.Local).AddTicks(3952),
                             Name = "Göz Makyajı",
                             Url = "goz-makyaji"
                         });
@@ -144,21 +144,21 @@ namespace CosmeticShop.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0123cd7a-3ccb-43e7-b3ad-0faa4e49dcbf",
+                            Id = "5ea5297a-b46d-4493-9f8f-40404265b894",
                             Description = "Süper Yönetici haklarını taşıyan rol",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "05f30794-ff2e-4377-9d46-80b0b296a165",
+                            Id = "5f2378b4-ae0f-4e4d-81af-3e5d7eb7cc97",
                             Description = "Yönetici haklarını taşıyan rol",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "f8626d43-ee81-48bd-9da2-270512d29c1a",
+                            Id = "58adebfa-9a01-4d55-8b4e-3441ce02c900",
                             Description = "Müşteri haklarını taşıyan rol",
                             Name = "Customer",
                             NormalizedName = "CUSTOMER"
@@ -254,11 +254,11 @@ namespace CosmeticShop.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "fb33ef56-a115-4ec6-ac81-20c2daa71398",
+                            Id = "a617ad03-02da-4890-a497-2343db171123",
                             AccessFailedCount = 0,
                             Address = "Güngören İstanbul",
                             City = "İstanbul",
-                            ConcurrencyStamp = "6fdd369d-eaa5-4332-b524-75d28ff082eb",
+                            ConcurrencyStamp = "3fa2c7f7-9f47-4b32-9f20-a809319633b0",
                             DateOfBirth = new DateTime(2002, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "surmelimehmet@gmail.com",
                             EmailConfirmed = true,
@@ -268,20 +268,20 @@ namespace CosmeticShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SURMELIMEHMET@GMAIL.COM",
                             NormalizedUserName = "SURMELIMEHMET",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDvOezlwAwAUKhXpqr9T5QGLnSd/RBB9/CyTNy5GzbnsebhcLg0ORxEk5Pf1Sgf8HQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFiHWWq1L9W+cIAE1Hw2B4DVfwdr6MNyymFWW2gLnAKV0GMXwa0xW67A0eSNrLX0Iw==",
                             PhoneNumber = "5552225533",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c3ca1938-df0c-426a-aea3-9569781d36b4",
+                            SecurityStamp = "c5e1e3ff-1029-44d3-a26e-a29f3edc6cd4",
                             TwoFactorEnabled = false,
                             UserName = "surmelimehmet"
                         },
                         new
                         {
-                            Id = "8a7e663b-95b0-49e7-99d0-d2c0e92d3262",
+                            Id = "101e4fd8-4a25-4d1b-97ac-506b4f1e6bd7",
                             AccessFailedCount = 0,
                             Address = "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar",
                             City = "İstanbul",
-                            ConcurrencyStamp = "89af4471-d32f-4a3d-ad85-a6ba2ad910ad",
+                            ConcurrencyStamp = "c5edea53-5986-483c-ab16-943f333f4a1e",
                             DateOfBirth = new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "selinmete@gmail.com",
                             EmailConfirmed = true,
@@ -291,20 +291,20 @@ namespace CosmeticShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SELINMETE@GMAIL.COM",
                             NormalizedUserName = "SELINMETE",
-                            PasswordHash = "AQAAAAIAAYagAAAAEK4hMmTySBZb0USHF3NtZkUOLwnhuujlbB0qH1DmbNLAA89oSlYrCkuRTn3YWIKRFg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJbzE3zL8z7LtbGEcJGuz0U6ibcM2aR4vuzhGVsgAyBoLUxeOjJiokGQ3ErZ64Mijg==",
                             PhoneNumber = "5387996655",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0bc0c9a0-6579-4e32-b068-abdee1f80ce9",
+                            SecurityStamp = "db81ea5c-4a15-44fa-8a20-54089039bb79",
                             TwoFactorEnabled = false,
                             UserName = "selinmete"
                         },
                         new
                         {
-                            Id = "ae5c0669-de3d-4a51-83af-f40c6a73dec4",
+                            Id = "1ab65685-d4f3-4140-95ed-c8ba5cb5870b",
                             AccessFailedCount = 0,
                             Address = "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar",
                             City = "İstanbul",
-                            ConcurrencyStamp = "9135e8f2-07bf-48ce-97d5-c290963b8490",
+                            ConcurrencyStamp = "a03a53ec-2d17-45dc-8d78-9543da293d5e",
                             DateOfBirth = new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "kemaldurukan@gmail.com",
                             EmailConfirmed = true,
@@ -314,20 +314,20 @@ namespace CosmeticShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "KEMALDURUKAN@GMAIL.COM",
                             NormalizedUserName = "KEMALDURUKAN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGSY9kxxqxk196FERmu6ERDUutgJmUPZo1jc/jcRHChwC4rk0C955TTbltes5GO4Ww==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENwPhrooFl7Dco/lbfbmjwiWWPjZOTnngkE/Tc31AiWSW7h2Evt/HNSpIkVqpBWNjg==",
                             PhoneNumber = "5387996655",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3965e7da-7aa0-4274-9e56-1189aa6f643e",
+                            SecurityStamp = "e4451813-67a1-46ee-b5bf-834019b623fc",
                             TwoFactorEnabled = false,
                             UserName = "kemaldurukan"
                         },
                         new
                         {
-                            Id = "8742dbdd-e949-44fe-8f1e-3054f743669c",
+                            Id = "064b5451-9197-45f1-ba4b-dceb262021a0",
                             AccessFailedCount = 0,
                             Address = "Halilpaşa Konağı Caddesi Kemeraltı Sokak No:4 D:2 Üsküdar",
                             City = "İstanbul",
-                            ConcurrencyStamp = "1b10aa06-f02c-4166-a645-75164eb5b211",
+                            ConcurrencyStamp = "d1cb7390-cfa9-4d2b-a871-f3cdb379f51a",
                             DateOfBirth = new DateTime(1993, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "aysenumay@gmail.com",
                             EmailConfirmed = true,
@@ -337,10 +337,10 @@ namespace CosmeticShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "AYSENUMAY@GMAIL.COM",
                             NormalizedUserName = "AYSENUMAY",
-                            PasswordHash = "AQAAAAIAAYagAAAAEH1UMU/dvmkHvyN+DhNUOXgfCF4+KI7s9k43erbGVolWf8edie5kBCAwKCIPJaJ5DA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEP98fVhb3s5LLQcmjES16VvZIaD3s0kU1Hk091StWqdbe6XWy9D4KiAVVsoKAEKzQA==",
                             PhoneNumber = "5387996655",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "547a9f9a-6c18-4551-ad65-e5e8a4e71714",
+                            SecurityStamp = "64ebc7c3-accb-43ac-9ee1-2f2256effbca",
                             TwoFactorEnabled = false,
                             UserName = "aysenumay"
                         });
@@ -535,12 +535,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1608),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4116),
                             ImageUrl = "1.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1612),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4122),
                             Name = "Diorm Sauvage EDP",
                             Price = 13000m,
                             Properties = "Mükemmel bir parfüm",
@@ -549,12 +549,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1621),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4130),
                             ImageUrl = "2.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1621),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4130),
                             Name = "Avon Full Speed",
                             Price = 69000m,
                             Properties = "Mükemmel parfüm",
@@ -563,12 +563,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1623),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4132),
                             ImageUrl = "3.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1623),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4133),
                             Name = "Tom Ford Bois Marocain Eau de Parfum 250 Ml",
                             Price = 29000m,
                             Properties = "İdare eder",
@@ -577,12 +577,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1624),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4135),
                             ImageUrl = "4.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1625),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4135),
                             Name = "Givenchy Gentleman Boisee Eau de Parfum EDP 200 Ml",
                             Price = 39000m,
                             Properties = "Harika bir parfüm",
@@ -591,12 +591,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1627),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4137),
                             ImageUrl = "5.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1627),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4137),
                             Name = "Dior Fahrenheit / Erkek Parfüm",
                             Price = 52000m,
                             Properties = "Harika bir parfüm",
@@ -605,12 +605,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1628),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4139),
                             ImageUrl = "6.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1629),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4140),
                             Name = "Blvgari BVLGARI Man Wood Essence - Eau de Parfum 150ml",
                             Price = 79000m,
                             Properties = "harika bir parfüm",
@@ -619,12 +619,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1630),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4141),
                             ImageUrl = "7.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1630),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4142),
                             Name = "Creed Aventus Edp 100 ml Erkek Parfüm",
                             Price = 19000m,
                             Properties = "harika bir parfüm",
@@ -633,12 +633,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1632),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4145),
                             ImageUrl = "8.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = false,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1638),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4156),
                             Name = "Parfums De Marly Pegasus Exclusif Edp 125 ml",
                             Price = 21000m,
                             Properties = "Süper bir parfüm",
@@ -647,12 +647,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4168),
                             ImageUrl = "9.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1651),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4169),
                             Name = "Tom Ford Tobacco Vanille Eau de Parfum 50 Ml",
                             Price = 1250m,
                             Properties = "Klasik sevenler için",
@@ -661,12 +661,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1652),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4171),
                             ImageUrl = "10.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1652),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4171),
                             Name = "Spice Bomb Extreme",
                             Price = 2100m,
                             Properties = "Dayanılmaz koku",
@@ -675,12 +675,12 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1654),
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4173),
                             ImageUrl = "11.png",
                             IsActive = true,
                             IsDeleted = false,
                             IsHome = true,
-                            ModifiedDate = new DateTime(2024, 4, 14, 21, 20, 12, 534, DateTimeKind.Local).AddTicks(1654),
+                            ModifiedDate = new DateTime(2024, 4, 15, 14, 29, 5, 768, DateTimeKind.Local).AddTicks(4173),
                             Name = "Paco Rabanne Invictus EDT Erkek Parfüm, 100 ml",
                             Price = 9800m,
                             Properties = "Dünya klasiği dayanılmaz koku",
@@ -836,26 +836,26 @@ namespace CosmeticShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8560),
-                            UserId = "fb33ef56-a115-4ec6-ac81-20c2daa71398"
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 766, DateTimeKind.Local).AddTicks(7912),
+                            UserId = "a617ad03-02da-4890-a497-2343db171123"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8586),
-                            UserId = "8a7e663b-95b0-49e7-99d0-d2c0e92d3262"
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 766, DateTimeKind.Local).AddTicks(7929),
+                            UserId = "101e4fd8-4a25-4d1b-97ac-506b4f1e6bd7"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8587),
-                            UserId = "ae5c0669-de3d-4a51-83af-f40c6a73dec4"
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 766, DateTimeKind.Local).AddTicks(7930),
+                            UserId = "1ab65685-d4f3-4140-95ed-c8ba5cb5870b"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 4, 14, 21, 20, 12, 532, DateTimeKind.Local).AddTicks(8588),
-                            UserId = "8742dbdd-e949-44fe-8f1e-3054f743669c"
+                            CreatedDate = new DateTime(2024, 4, 15, 14, 29, 5, 766, DateTimeKind.Local).AddTicks(7931),
+                            UserId = "064b5451-9197-45f1-ba4b-dceb262021a0"
                         });
                 });
 
@@ -971,23 +971,23 @@ namespace CosmeticShop.Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "fb33ef56-a115-4ec6-ac81-20c2daa71398",
-                            RoleId = "0123cd7a-3ccb-43e7-b3ad-0faa4e49dcbf"
+                            UserId = "a617ad03-02da-4890-a497-2343db171123",
+                            RoleId = "5ea5297a-b46d-4493-9f8f-40404265b894"
                         },
                         new
                         {
-                            UserId = "8a7e663b-95b0-49e7-99d0-d2c0e92d3262",
-                            RoleId = "05f30794-ff2e-4377-9d46-80b0b296a165"
+                            UserId = "101e4fd8-4a25-4d1b-97ac-506b4f1e6bd7",
+                            RoleId = "5f2378b4-ae0f-4e4d-81af-3e5d7eb7cc97"
                         },
                         new
                         {
-                            UserId = "ae5c0669-de3d-4a51-83af-f40c6a73dec4",
-                            RoleId = "05f30794-ff2e-4377-9d46-80b0b296a165"
+                            UserId = "1ab65685-d4f3-4140-95ed-c8ba5cb5870b",
+                            RoleId = "5f2378b4-ae0f-4e4d-81af-3e5d7eb7cc97"
                         },
                         new
                         {
-                            UserId = "8742dbdd-e949-44fe-8f1e-3054f743669c",
-                            RoleId = "f8626d43-ee81-48bd-9da2-270512d29c1a"
+                            UserId = "064b5451-9197-45f1-ba4b-dceb262021a0",
+                            RoleId = "58adebfa-9a01-4d55-8b4e-3441ce02c900"
                         });
                 });
 

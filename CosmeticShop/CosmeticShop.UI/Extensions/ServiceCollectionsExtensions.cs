@@ -103,7 +103,7 @@ namespace CosmeticShop.UI.Extensions
                 options.SlidingExpiration = true;
                 options.Cookie = new CookieBuilder
                 {
-                    Name = "MiniShop.Security.Cookie",
+                    Name = "CosmeticShop.Security.Cookie",
                     HttpOnly = true,
                     SameSite = SameSiteMode.Strict
                 };
