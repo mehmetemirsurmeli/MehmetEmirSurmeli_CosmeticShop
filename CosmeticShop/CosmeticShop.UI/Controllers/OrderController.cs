@@ -27,7 +27,6 @@ namespace CosmeticShop.UI.Controllers
             _shoppingCartItemManager = shoppingCartItemManager;
         }
 
-        //Login olmuş kullanıcının geçmiş siparişlerini gösterecek
         public IActionResult Index()
         {
             return View();
@@ -78,7 +77,7 @@ namespace CosmeticShop.UI.Controllers
                 //Yapılacak ödeme isteği için nesne yaratılıyor
                 CreatePaymentRequest request = new CreatePaymentRequest();
                 request.Locale = Locale.TR.ToString();
-                request.ConversationId = "FS-2310-13-MiniShopApp";
+                request.ConversationId = "CosmeticShop";
                 request.Price = orderViewModel.ShoppingCart.TotalPrice().ToString().Replace(",", ".");
                 request.PaidPrice = orderViewModel.ShoppingCart.TotalPrice().ToString().Replace(",", ".");
                 request.Currency = Currency.TRY.ToString();
@@ -139,7 +138,7 @@ namespace CosmeticShop.UI.Controllers
                     basketItem = new BasketItem();
                     basketItem.Id = item.ProductId.ToString();
                     basketItem.Name = item.ProductName;
-                    basketItem.Category1 = "Elektornik";
+                    basketItem.Category1 = "Parfüm";
                     basketItem.Category2 = "";
                     basketItem.ItemType = BasketItemType.PHYSICAL.ToString();
                     basketItem.Price = (item.Quantity * item.ProductPrice).ToString().Replace(",", ".");

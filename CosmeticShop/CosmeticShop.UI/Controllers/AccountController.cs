@@ -13,22 +13,21 @@ namespace CosmeticShop.UI.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IOrderService _orderManager;
+        private readonly IEmailSender _emailSender;
         private readonly IShoppingCartService _shoppingCartManager;
         private readonly INotyfService _notyfService;
-        private readonly IEmailSender _emailSender;
 
-
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IOrderService orderManager, IShoppingCartService shoppingCartManager, INotyfService notyfService, IEmailSender emailSender)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IOrderService orderManager, IEmailSender emailSender, IShoppingCartService shoppingCartManager, INotyfService notyfService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _orderManager = orderManager;
+            _emailSender = emailSender;
             _shoppingCartManager = shoppingCartManager;
             _notyfService = notyfService;
-            _emailSender = emailSender;
         }
 
-       
+        [Route("register")]
         [HttpGet]
         public IActionResult Register()
         {
@@ -55,7 +54,7 @@ namespace CosmeticShop.UI.Controllers
 
                     await _shoppingCartManager.InitializeShoppingCartAsync(user.Id);
 
-                    _notyfService.Success("Üyeliğiniz başarıyla oluşturulmuştur. Mailinize gelen onay mailini kontrol ediniz.", 10);
+                    _notyfService.Success("Üyeliğiniz başarıyla oluşturulmuştur. Mailinizi kontrol ederek üyeliğinizi onaylayabilirsiniz.", 10);
                     return Redirect("~/");
                 }
 
@@ -63,6 +62,8 @@ namespace CosmeticShop.UI.Controllers
 
             return View(registerViewModel);
         }
+
+
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
@@ -85,9 +86,10 @@ namespace CosmeticShop.UI.Controllers
                     var isConfirmed = await _userManager.IsEmailConfirmedAsync(user);
                     if (!isConfirmed)
                     {
-                        _notyfService.Warning("Hesabınız onaylı değildir. Mailinize gelen onay linkinden onaylama işlemini yapabilirsiniz.");
+                        _notyfService.Warning("Hesabınız onaylı değildir. Mailinize gelen onay linkini tıklayarak, onaylayabilirsiniz.");
                         return View(loginViewModel);
                     }
+                    //Login olmayı deniyoruz.
                     var result = await _signInManager.PasswordSignInAsync(user, loginViewModel.Password, loginViewModel.RememberMe, true);
                     var failedAttempCount = await _userManager.GetAccessFailedCountAsync(user);
                     if (result.Succeeded)
@@ -96,7 +98,7 @@ namespace CosmeticShop.UI.Controllers
                         await _userManager.SetLockoutEndDateAsync(user, null);
 
                         var returnUrl = TempData["ReturnUrl"]?.ToString();
-                        _notyfService.Information("Hoş geldiniz.");
+                        _notyfService.Information("Giriş başarılı. Hoş geldiniz.");
                         if (!String.IsNullOrEmpty(returnUrl))
                         {
                             return Redirect(returnUrl);
@@ -134,6 +136,7 @@ namespace CosmeticShop.UI.Controllers
             }
             return View(loginViewModel);
         }
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
@@ -290,7 +293,7 @@ namespace CosmeticShop.UI.Controllers
                 userId = user.Id,
                 tokenCode = tokenCode
             });
-            var subject = "CosmeticShop Şifre Sıfırlama";
+            var subject = "MiniShopApp Şifre Sıfırlama";
             var htmlMessage = $"<h1>MiniShopApp Şifre Sıfırlama İşlemi</h1>" +
                 $"<p>" +
                 $"Lütfen şifrenizi sıfırlamak için aşağıdaki linke tıklayınız." +

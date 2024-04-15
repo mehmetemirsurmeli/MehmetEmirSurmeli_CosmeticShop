@@ -21,4 +21,8 @@
     <ProjectReference Include="..\CosmeticShop.Shared\CosmeticShop.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\Categories\" />
+  </ItemGroup>
+
 </Project>
